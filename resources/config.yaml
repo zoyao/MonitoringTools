@@ -1,24 +1,26 @@
-#路口登录用户
+# 路口登录用户
 lukou:
   username: username
   password: password
-#消息推送
+# 消息推送
 notice:
   pushdeer:
     url: https://api2.pushdeer.com/message/push?
-#消息推送
+# 消息推送对应key
 users:
   yzy:
     key: PDU1Ttmn2Kngr
   yao:
     key: PDU1Ttmn2Kngr
-#定时任务监控
+# 定时任务监控
 check:
   lukou:
-    #监控间隔时间秒
+    # 监控间隔时间秒
     interval: 60
     list:
+      # 监控列表,支持多用户多关键词
       - user: yzy
+        # 监控关键词列表
         keywords:
           - 饮用水
           - 矿泉水

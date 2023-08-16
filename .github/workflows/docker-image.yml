@@ -11,12 +11,13 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    env:
+      TAG: ${{ variables.REGISTRY_NAME }}:$(date +%s)
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag monitoring-tools:$(date +%s)
+      run: docker build . --file Dockerfile --tag ${{ env.TAG }}
            docker login -u ${{ secrets.REGISTRY_USERNAME }} -p ${{ secrets.REGISTRY_PASSWORD }}
-           docker push ${{ secrets.DOCKER_REPOSITORY }}
+           docker push ${{ env.TAG }}
 
 

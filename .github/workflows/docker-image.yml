@@ -15,11 +15,7 @@ jobs:
     env:
       TAG: $(date +%s)
     steps:
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v1
-      with:
-        install: true
-
+    - uses: actions/checkout@v3
     - name: Docker Build and Tag
       run: docker build --load -t ${{ vars.REGISTRY_NAME }}:latest -t ${{ vars.REGISTRY_NAME }}:${{ env.TAG }} --target deploy . --file Dockerfile
 

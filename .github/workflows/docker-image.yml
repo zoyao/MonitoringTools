@@ -16,8 +16,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ${{ env.TAG }}
-           docker login -u ${{ secrets.REGISTRY_USERNAME }} -p ${{ secrets.REGISTRY_PASSWORD }}
-           docker push ${{ env.TAG }}
+      run: |
+        docker build . --file Dockerfile --tag ${{ env.TAG }}
+        docker login -u ${{ secrets.REGISTRY_USERNAME }} -p ${{ secrets.REGISTRY_PASSWORD }}
+        docker push ${{ env.TAG }}
 
 

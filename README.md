@@ -2,7 +2,7 @@
 
 Monitoring tools for online shopping website, currently supports lukou...
 
-购物网站监控工具,目前支持路口(<https://lukou.com/>),识别到关键词采用pushdeer(<https://github.com/easychen/pushdeer.git>)进行消息推送
+购物网站监控工具,目前支持[路口网](<https://lukou.com/>),识别到关键词采用[pushdeer](<https://github.com/easychen/pushdeer.git>)进行消息推送
 
 ## Docker
 

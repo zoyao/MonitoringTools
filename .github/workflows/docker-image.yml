@@ -11,6 +11,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    environment: DockerHub
     env:
       TAG: ${{ vars.REGISTRY_NAME }}:$(date +%s)
     steps:

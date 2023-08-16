@@ -1,0 +1,26 @@
+#路口登录用户
+lukou:
+  username: username
+  password: password
+#消息推送
+notice:
+  pushdeer:
+    url: https://api2.pushdeer.com/message/push?
+#消息推送
+users:
+  yzy:
+    key: PDU1Ttmn2Kngr
+  yao:
+    key: PDU1Ttmn2Kngr
+#定时任务监控
+check:
+  lukou:
+    #监控间隔时间秒
+    interval: 60
+    list:
+      - user: yzy
+        keywords:
+          - 饮用水
+          - 矿泉水
+          - 八喜
+          - 眼镜

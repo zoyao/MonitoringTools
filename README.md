@@ -1,5 +1,7 @@
 # MonitoringTools
 
+Monitoring tools for online shopping website, currently supports lukou...
+
 购物网站监控工具,目前支持路口(https://lukou.com/)
 
 ## Docker

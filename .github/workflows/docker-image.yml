@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: DockerHub
     env:
-      TAG: ${{ vars.REGISTRY_NAME }}:$(date +%s)
+      TAG: zoyao/monitoring-tools:$(date +%s)
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image

@@ -21,7 +21,7 @@ jobs:
         install: true
 
     - name: Docker Build and Tag
-      run: docker build --load -t ${{ vars.REGISTRY_NAME }}:latest -t ${{ vars.REGISTRY_NAME }}:${{ env.TAG }} --target deploy .
+      run: docker build --load -t ${{ vars.REGISTRY_NAME }}:latest -t ${{ vars.REGISTRY_NAME }}:${{ env.TAG }} --target deploy . --file Dockerfile
 
     - name: Log in to Docker Hub
       uses: docker/login-action@v1

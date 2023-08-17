@@ -14,9 +14,9 @@ git clone https://github.com/zoyao/MonitoringTools.git
 
 ### config
 ```shell
-mkdir -r /app/py_tools_config/resources
-cp /tmp/MonitoringTools/resources/config.yaml /app/py_tools_config/resources/config.yaml
-vim /app/py_tools_config/resources/config.yaml
+mkdir -r /app/monitoring-tools/resources
+cp /tmp/MonitoringTools/resources/config.yaml /app/monitoring-tools/resources/config.yaml
+vim /app/monitoring-tools/resources/config.yaml
 ```
 
 ### build
@@ -27,10 +27,10 @@ docker build -t monitoringTools:0.1 .
 
 ### run
 ```shell
-docker run -d --name monitoringTools -v /app/py_tools_config/resources:/app/resources monitoringTools:0.1
+docker run -d --name monitoringTools -v /app/monitoring-tools/resources:/app/resources monitoringTools:0.1
 ```
 
 ### run debug
 ```shell
-docker run -d --name monitoringTools -e TZ=Asia/Shanghai --network host -v /app/py_tools_config/logs:/app/logs -v /app/py_tools_config/resources:/app/resources monitoringTools:0.1
+docker run -d --name monitoringTools -e TZ=Asia/Shanghai --network host -v /app/monitoring-tools/logs:/app/logs -v /app/monitoring-tools/resources:/app/resources monitoringTools:0.1
 ```

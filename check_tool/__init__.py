@@ -8,7 +8,7 @@ from check_tool import check
 
 
 def run_interval(base_dir='..'):
-    version = 'v1.0.1'
+    version = 'v1.0.2'
     config = conf(base_dir)
     lukou_check = lukou(config)
     pushdeer.set_config(config)
